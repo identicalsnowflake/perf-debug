@@ -1,0 +1,15 @@
+cabal-version:       3.0
+name:                perf-debug
+version:             0.1.0.0
+license-file:        LICENSE
+author:              Identical Snowflake
+maintainer:          identicalsnowflake@yandex.com
+build-type:          Simple
+
+executable perf-debug
+  main-is: Main.hs
+  build-depends:       base >=4.13 && <5
+                     , primitive >= 0.7.0.1
+                     , vector >= 0.12.1.2
+  default-language:    Haskell2010
+  ghc-options: -fprof-auto -rtsopts -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -Widentities -Wredundant-constraints -Wcpp-undef -fwarn-tabs -funbox-strict-fields -fno-warn-unused-do-bind
